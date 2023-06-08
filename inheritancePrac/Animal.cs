@@ -4,6 +4,19 @@ namespace inheritancePrac
 {
     internal class Animal
     {
+        private void Private() { }
+
+        protected void Protected() { }
+
+        public void Public() { }
+
+        public void TestA()
+        {
+            Private();
+            Protected();
+            Public();
+        }
+
         public Animal() 
         {
             this.Age = 0;
