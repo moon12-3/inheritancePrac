@@ -11,8 +11,19 @@ namespace inheritancePrac
     {
         static void Main(string[] args)
         {
-            Dog dog = new Dog();
-            Cat cat = new Cat();
+            List<Animal> animals = new List<Animal>() { 
+                new Dog(), new Dog(), new Dog(),
+                new Cat(), new Cat(), new Cat() 
+            };
+
+            foreach (var item in animals)
+            {
+                item.Eat();
+                item.Sleep();
+
+                ((Dog)item).Bark();
+                ((Cat)item).Meow();
+            }
         }
     }
 }
